@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, SafeAreaView, Image } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -14,7 +15,8 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
  * code for a specific native component. In a sense it's a "write once, run anywhere" development paradigm.
  */
 export default function App() {
-  return <WelcomeScreen />;
+  // return <WelcomeScreen />;
+  return <ViewImageScreen />;
 }
 
 /*<View
