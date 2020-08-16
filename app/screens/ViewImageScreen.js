@@ -3,7 +3,6 @@ import { Image, StyleSheet, View } from "react-native";
 
 // fonts
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import colors from "../config/colors";
 
 import colors from "../config/colors";
 

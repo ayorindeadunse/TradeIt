@@ -3,6 +3,7 @@ import React from "react";
 import { View, SafeAreaView, Image } from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -15,8 +16,9 @@ import ViewImageScreen from "./app/screens/ViewImageScreen";
  * code for a specific native component. In a sense it's a "write once, run anywhere" development paradigm.
  */
 export default function App() {
+  // return <ViewImageScreen />;
   // return <WelcomeScreen />;
-  return <ViewImageScreen />;
+  return <ListingDetailsScreen />;
 }
 
 /*<View
