@@ -1,9 +1,14 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, SafeAreaView, Image } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+
+import Screen from "./app/components/Screen";
+import Icon from "./app/components/Icon";
+import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingsScreen from "./app/screens/ListingsScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -18,7 +23,8 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 export default function App() {
   // return <ViewImageScreen />;
   // return <WelcomeScreen />;
-  return <ListingDetailsScreen />;
+  //return <ListingDetailsScreen />;
+  return <ListingsScreen />;
 }
 
 /*<View
