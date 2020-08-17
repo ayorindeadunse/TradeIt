@@ -29,7 +29,7 @@ function ListingsScreen(props) {
         renderItem={({ item }) => (
           <Card
             title={item.title}
-            subTitle={"$" + item.price}
+            subTitle={"N" + item.price}
             image={item.image}
           />
         )}
