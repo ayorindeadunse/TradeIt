@@ -24,7 +24,7 @@ export default function App() {
   // return <ViewImageScreen />;
   // return <WelcomeScreen />;
   //return <ListingDetailsScreen />;
-  return <WelcomeScreen />;
+  return <MessagesScreen />;
 }
 
 /*<View
