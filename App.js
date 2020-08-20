@@ -1,7 +1,13 @@
 import React from "react";
 
 import ListingEditScreen from "./app/screens/ListingEditScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 import LoginScreen from "./app/screens/LoginScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import AccountScreen from "./app/screens/AccountScreen";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -14,27 +20,14 @@ import LoginScreen from "./app/screens/LoginScreen";
  * code for a specific native component. In a sense it's a "write once, run anywhere" development paradigm.
  */
 export default function App() {
-  // return <ViewImageScreen />;
-  // return <WelcomeScreen />;
+  //return <ViewImageScreen />;
+  //return <WelcomeScreen />;
   //return <ListingDetailsScreen />;
   // return <MessagesScreen />;
   // return <ListingEditScreen />;
   //return <LoginScreen />;
-  return <ListingEditScreen />;
+  // return <ListingEditScreen />;
+  //return <LoginScreen />;
+  //return <ListingEditScreen />;
+  return <AccountScreen />;
 }
-
-/*<View
-style={{
-  backgroundColor: "#fff",
-  flex: 1,
-  flexDirection: "row", // horizontal axis
-  justifyContent: "center", // align items along the main or primary axis
-  alignItems: "center", // align items around the secondary axis
-}}
->
-<View
-  style={{ backgroundColor: "dodgerblue", width: 100, height: 100 }}
-/>
-<View style={{ backgroundColor: "gold", width: 100, height: 100 }} />
-<View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
-</View>*/
