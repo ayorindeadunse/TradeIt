@@ -1,13 +1,5 @@
 import React from "react";
-
 import ListingEditScreen from "./app/screens/ListingEditScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import LoginScreen from "./app/screens/LoginScreen";
-import RegisterScreen from "./app/screens/RegisterScreen";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import AccountScreen from "./app/screens/AccountScreen";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -23,11 +15,12 @@ export default function App() {
   //return <ViewImageScreen />;
   //return <WelcomeScreen />;
   //return <ListingDetailsScreen />;
-  return <MessagesScreen />;
+
   // return <ListingEditScreen />;
   //return <LoginScreen />;
   // return <ListingEditScreen />;
   //return <LoginScreen />;
   //return <ListingEditScreen />;
   // return <AccountScreen />;
+  return <ListingEditScreen />;
 }
