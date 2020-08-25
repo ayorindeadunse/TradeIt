@@ -1,5 +1,8 @@
 import React from "react";
-import ListingEditScreen from "./app/screens/ListingEditScreen";
+import { NavigationContainer } from "@react-navigation/native";
+
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *
@@ -12,15 +15,9 @@ import ListingEditScreen from "./app/screens/ListingEditScreen";
  * code for a specific native component. In a sense it's a "write once, run anywhere" development paradigm.
  */
 export default function App() {
-  //return <ViewImageScreen />;
-  //return <WelcomeScreen />;
-  //return <ListingDetailsScreen />;
-
-  // return <ListingEditScreen />;
-  //return <LoginScreen />;
-  // return <ListingEditScreen />;
-  //return <LoginScreen />;
-  //return <ListingEditScreen />;
-  // return <AccountScreen />;
-  return <ListingEditScreen />;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }
