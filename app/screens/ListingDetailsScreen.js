@@ -10,10 +10,10 @@ function ListingDetailsScreen({ route }) {
 
   return (
     <View>
-      <Image style={styles.image} source={listing.image} />
+      <Image style={styles.image} source={listing.images.image} />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
-        <Text style={styles.price}>${listing.price}</Text>
+        <Text style={styles.price}>NGN{listing.price}</Text>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/ayorinde.jpg")}
