@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import navigationTheme from "./app/navigation/navigationTheme";
 import AppNavigator from "./app/navigation/AppNavigator";
+import OfflineNotice from "./app/components/OfflineNotice";
 
 /***Compiling this App will compile the code and translate it to their native widgets.
  *

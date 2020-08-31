@@ -10,7 +10,7 @@ function ListingDetailsScreen({ route }) {
 
   return (
     <View>
-      <Image style={styles.image} source={listing.images.image} />
+      <Image style={styles.image} source={listing.images[0]} />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
         <Text style={styles.price}>NGN{listing.price}</Text>
