@@ -5,7 +5,6 @@ import { useNetInfo } from "@react-native-community/netinfo";
 
 import Text from "./Text";
 import colors from "../config/colors";
-import styles from "../config/styles";
 
 function OfflineNotice(props) {
   const netInfo = useNetInfo();
@@ -16,6 +15,7 @@ function OfflineNotice(props) {
         <Text style={styles.text}>No Internet Connection</Text>
       </View>
     );
+
   return null;
 }
 
