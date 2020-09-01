@@ -21,6 +21,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "An app where people can trade/sell used items to one another."
+    "description": "An app where people can trade/sell used items to one another.",
+    "notification": {
+      "iosDisplayInForeground": true
+    }
   }
 }
