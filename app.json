@@ -16,7 +16,13 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ayorindeolwale.tradeit",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.ayorindeolawale.tradeit",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -24,6 +30,19 @@
     "description": "An app where people can trade/sell used items to one another.",
     "notification": {
       "iosDisplayInForeground": true
+    },
+    "extra": {
+      "bugsnag": {
+        "apiKey": "eaae44f9a43ae0c04b689e44a0adce1e"
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
     }
   }
 }
