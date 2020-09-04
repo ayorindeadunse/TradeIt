@@ -12,7 +12,7 @@ const store = async (key, value) => {
     };
     await AsyncStorage.setItem(prefix + key, JSON.stringify(item));
   } catch (error) {
-    logger.log(error);
+    logger.log("Error setting key in keystore", error);
   }
 };
 
