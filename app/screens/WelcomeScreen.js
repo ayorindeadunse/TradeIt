@@ -7,17 +7,18 @@ import routes from "../navigation/routes";
 function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
-      blurRadius={10}
+      blurRadius={5}
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
-        <Text style={styles.tagline}>Sell What You Don't Need</Text>
+        <Image style={styles.logo} source={require("../assets/icon.png")} />
+        <Text style={styles.tagline}>Just sell it!</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <Button
           title='Login'
+          color='apploading'
           onPress={() => navigation.navigate(routes.LOGIN)}
         />
         <Button

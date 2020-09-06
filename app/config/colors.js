@@ -1,5 +1,6 @@
 export default {
   primary: "#fc5c65",
+  apploading: "#F38840",
   secondary: "#4ecdc4",
   black: "#000",
   white: "#fff",
