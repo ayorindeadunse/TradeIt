@@ -82,6 +82,21 @@ const categories = [
 
 function ListingEditScreen() {
   const location = useLocation();
+  // const auth = useAuth();
+
+  // Get the loggedOnUser to pass with the location as part of the request. If null is returned, send the user to the login page.
+  //const loggedOnUser = auth.user;
+
+  /*
+   const { data: authToken } = await loginApi.request(
+      userInfo.email,
+      userInfo.password
+    );
+    auth.logIn(authToken);
+
+    or...the AuthContext checks if the user is logged on and navigates to the login page if the token is null
+  */
+
   const [uploadVisible, setUploadVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -95,6 +110,7 @@ function ListingEditScreen() {
 
     if (!result.ok) {
       setUploadVisible(false);
+      //console.log(result);
       return alert("Could not save the listing");
     }
 

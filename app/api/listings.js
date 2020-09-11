@@ -22,6 +22,8 @@ export const addListing = (listing, onUploadProgress) => {
   if (listing.location)
     data.append("location", JSON.stringify(listing.location));
 
+  // Send the loggedOnUser as part of the data to post to the server
+
   return client.post(endpoint, data, {
     onUploadProgress: (progress) =>
       onUploadProgress(progress.loaded / progress.total),
