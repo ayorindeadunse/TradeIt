@@ -12,9 +12,11 @@ function ContactSellerForm({ listing }) {
     Keyboard.dismiss();
 
     const result = await messagesApi.send(message, listing.id);
+    // console.log(result);
 
     if (!result.ok) {
-      logger.log("Error sending message", error);
+      // logger.log("Error sending message", error);
+      console.log("Error sending message");
 
       return Alert.alert("Error", "Could not send the message to the seller.");
     }

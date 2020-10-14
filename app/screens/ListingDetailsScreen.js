@@ -32,10 +32,10 @@ function ListingDetailsScreen({ route }) {
         <Text style={styles.title}>{listing.title}</Text>
         <Text style={styles.price}>NGN{listing.price}</Text>
         <View style={styles.userContainer}>
-          <ListItem
+          <ListItem // pass the link to the user's avator as the image parameter
             image={require("../assets/ayorinde.jpg")}
-            title='Ayorinde Adunse'
-            subTitle='5 Listings'
+            title='Ayorinde Adunse' // pass the user title
+            subTitle='5 Listings' // get a count of the listing count
           />
         </View>
         <ContactSellerForm listing={listing} />
