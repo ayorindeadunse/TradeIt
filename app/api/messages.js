@@ -1,5 +1,9 @@
 import client from "./client";
 
+const deleteMessage = (messageId) =>
+  //client.delete("/messages/id", { messageId });
+  client.delete(`/messages/${messageId}`, {});
+
 const send = (message, listingId) =>
   client.post("/messages", {
     message,
@@ -12,4 +16,5 @@ const getMessages = () => client.get("/messages", {});
 export default {
   send,
   getMessages,
+  deleteMessage,
 };

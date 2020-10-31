@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
 import Screen from "../components/Screen";
@@ -39,26 +39,32 @@ function MessagesScreen(props) {
     getMessagesApi.request();
   }, []);
 
-  // if (getMessagesApi.error) console.log("Error", getMessagesApi.error);
-  // console.log("data info", getMessagesApi);
-  // const [messages, setMessages] = useState(initialMessages);
-  // const [refreshing, setRefreshing] = useState(false);
+  const [messages, setMessages] = useState(getMessagesApi.data);
+  const [refreshing, setRefreshing] = useState(false);
 
-  const handleDelete = (message) => {
+  const handleDelete = async (message) => {
     // Delete the message from messages
-
     /***
      * updated: Consider deleting messages from the database directly, or just from the screen.
      */
-    setMessages(messages.filter((m) => m.id !== message.id));
+    // setMessages(messages.filter((m) => m.id !== message.id));
+    await messagesApi.deleteMessage(message);
+    setMessages(getMessagesApi.data);
+
+    // console.log(deletemsg);
+    // console.log(message);
+
+    //call setMessages since the state has changed to return the messages for the user.
   };
+
+  // delete
 
   return (
     <Screen>
       <FlatList
-        // data = {messages}
+        //  data={messages}
         data={getMessagesApi.data}
-        keyExtractor={(message) => message.id.toString()}
+        keyExtractor={(message) => message.id}
         renderItem={({ item }) => (
           <ListItem
             title={item.toUserId}
@@ -66,11 +72,22 @@ function MessagesScreen(props) {
             image={item.image}
             onPress={() => console.log("Message selected", item)}
             renderRightActions={() => (
-              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+              <ListItemDeleteAction onPress={() => handleDelete(item.id)} />
             )}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages(/*[
+            {
+              id: 2,
+              title: "T2",
+              description: "D2",
+              image: require("../assets/ayorinde.jpg"),
+            },
+          ]*/);
+        }}
       />
     </Screen>
   );
